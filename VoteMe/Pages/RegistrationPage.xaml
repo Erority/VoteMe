@@ -1,0 +1,171 @@
+﻿<Page x:Class="VoteMe.Pages.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VoteMe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="RegistrationPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel
+            Grid.Row="0">
+
+            <TextBlock Text="Имя" HorizontalAlignment="Center"/>
+            <Border 
+                CornerRadius="18"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="150 10">
+                <TextBox
+                    x:Name="tbFName"
+                    BorderThickness="0"
+                    Margin="5"
+                    FontSize="24"
+                    TextAlignment="Center"
+                    Background="Transparent"/>
+            </Border>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1">
+
+            <TextBlock Text="Фамилия" HorizontalAlignment="Center"/>
+            <Border 
+                CornerRadius="18"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="150 10">
+                <TextBox
+                    x:Name="tbLName"
+                    BorderThickness="0"
+                    Margin="5"
+                    FontSize="24"
+                    TextAlignment="Center"
+                    Background="Transparent"/>
+            </Border>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2">
+
+            <TextBlock Text="Отчество" HorizontalAlignment="Center"/>
+            <Border 
+                CornerRadius="18"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="150 10">
+                <TextBox
+                    x:Name="tbMName"
+                    BorderThickness="0"
+                    Margin="5"
+                    FontSize="24"
+                    TextAlignment="Center"
+                    Background="Transparent"/>
+            </Border>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="3">
+
+            <TextBlock Text="Логин" HorizontalAlignment="Center"/>
+            <Border 
+                CornerRadius="18"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="150 10">
+                <TextBox
+                    x:Name="tbLogin"
+                    BorderThickness="0"
+                    Margin="5"
+                    FontSize="24"
+                    TextAlignment="Center"
+                    Background="Transparent"/>
+            </Border>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="4">
+
+            <TextBlock Text="Пароль" HorizontalAlignment="Center"/>
+            <Border 
+                CornerRadius="18"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Margin="150 10">
+                <TextBox
+                    x:Name="tbPassword"
+                    BorderThickness="0"
+                    Margin="5"
+                    FontSize="24"
+                    TextAlignment="Center"
+                    Background="Transparent"/>
+            </Border>
+        </StackPanel>
+
+        <WrapPanel
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.Row="5">
+
+            <ToggleButton 
+                Width="30"
+                Height="30"
+                x:Name="toggleButton"
+                >
+                <ToggleButton.Style>
+                    <Style TargetType="{x:Type ToggleButton}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ToggleButton">
+                                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                Background="{TemplateBinding Background}" CornerRadius="50">
+                                        <ContentPresenter HorizontalAlignment="Center"                  
+                                              VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background" Value="Red" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ToggleButton.Style>
+            </ToggleButton>
+            <TextBlock VerticalAlignment="Center" Text="Администратор"/>
+        </WrapPanel>
+
+        <Button
+            Visibility="{Binding UIToQuestionVisibility}"
+            Grid.Column="2"
+            Grid.Row="6"
+            FontSize="18"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="20"
+            Style="{DynamicResource ButtonStyle1}"
+            Background="{x:Null}" 
+            BorderBrush="Black"
+                x:Name="buttonReg"
+            
+            Click="buttonReg_Click"
+            >
+            <TextBlock
+               
+                Text="Зарегестрировать"
+                Margin="5"
+                />
+
+        </Button>
+    </Grid>
+</Page>

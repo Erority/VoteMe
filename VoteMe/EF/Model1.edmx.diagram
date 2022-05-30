@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26230a1a36584019be2ec996ec299878" Name="Diagram1">
+        <EntityTypeShape EntityType="VoteMeDBModel.Survery" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VoteMeDBModel.SurveryResult" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VoteMeDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="VoteMeDBModel.User" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VoteMeDBModel.Vote" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VoteMeDBModel.VoteResult" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="VoteMeDBModel.FK_SurveryResult_Survery" ManuallyRouted="false" />
+        <AssociationConnector Association="VoteMeDBModel.FK_SurveryResult_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VoteMeDBModel.FK_VoteResult_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VoteMeDBModel.FK_VoteResult_Vote" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
